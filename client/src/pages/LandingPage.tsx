@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useGameStore } from '../store/gameStore';
 import { Dices, Users, Award, Play, Shield, LogIn, Sparkles, Building2 } from '../components/Icons';
 import { soundManager } from '../utils/sounds';
+import FullscreenButton from '../components/FullscreenButton';
 
 const features = [
   {
@@ -214,15 +215,19 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* Clear action: Join existing room with code */}
-        <button
-          onClick={handleJoinDirect}
-          className="btn-secondary py-1.5 sm:py-2 px-3 sm:px-4 text-xs flex items-center gap-1.5"
-          title="Join with Room Code"
-        >
-          <LogIn size={14} className="text-gold-400" />
-          <span>Join with Code</span>
-        </button>
+        {/* Actions: Fullscreen & Join room */}
+        <div className="flex items-center gap-2">
+          <FullscreenButton showLabel iconSize={14} />
+
+          <button
+            onClick={handleJoinDirect}
+            className="btn-secondary py-1.5 sm:py-2 px-3 sm:px-4 text-xs flex items-center gap-1.5"
+            title="Join with Room Code"
+          >
+            <LogIn size={14} className="text-gold-400" />
+            <span>Join with Code</span>
+          </button>
+        </div>
       </header>
 
       {/* Hero Section */}

@@ -58,6 +58,8 @@ import {
   RotateCcw,
   XCircle,
   AlertCircle,
+  Maximize2,
+  Minimize2,
 } from 'lucide-react';
 
 // Token avatar icon mapping
@@ -191,4 +193,6 @@ export {
   RotateCcw,
   XCircle,
   AlertCircle,
+  Maximize2,
+  Minimize2,
 };

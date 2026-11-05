@@ -18,6 +18,7 @@ import {
 } from '../components/Icons';
 import { getAvatarColor } from '../utils/gameUtils';
 import type { Room, GameState } from '../types';
+import FullscreenButton from '../components/FullscreenButton';
 
 export default function LobbyPage() {
   const {
@@ -173,11 +174,15 @@ export default function LobbyPage() {
         className="w-full max-w-2xl relative z-10"
       >
         {/* Header */}
-        <div className="text-center mb-6">
-          <h1 className="text-3xl md:text-4xl font-display font-bold gold-text tracking-wide mb-1">
-            NAVO VYAPAR
-          </h1>
-          <p className="text-emerald-300/70 text-xs md:text-sm">Multiplayer Table Lobby</p>
+        <div className="flex items-center justify-between mb-5">
+          <div className="w-9" />
+          <div className="text-center">
+            <h1 className="text-3xl md:text-4xl font-display font-bold gold-text tracking-wide mb-1">
+              NAVO VYAPAR
+            </h1>
+            <p className="text-emerald-300/70 text-xs md:text-sm">Multiplayer Table Lobby</p>
+          </div>
+          <FullscreenButton iconSize={15} showLabel={false} />
         </div>
 
         {/* Room Code Card */}

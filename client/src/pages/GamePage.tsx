@@ -11,6 +11,7 @@ import ChatPanel from '../components/ChatPanel';
 import RulesModal from '../components/RulesModal';
 import TransactionHistory from '../components/TransactionHistory';
 import NotificationToast from '../components/NotificationToast';
+import FullscreenButton from '../components/FullscreenButton';
 import { loadBoardConfig, formatMoney } from '../utils/gameUtils';
 import { soundManager } from '../utils/sounds';
 import {
@@ -222,6 +223,8 @@ export default function GamePage() {
                 )}
               </button>
 
+              <FullscreenButton iconSize={14} />
+
               <button
                 onClick={() => setShowChat(!showChat)}
                 className="btn-primary py-1 px-2.5 text-xs flex items-center gap-1 shadow-gold"
@@ -286,6 +289,8 @@ export default function GamePage() {
                   <VolumeX className="w-3 h-3 text-emerald-500" />
                 )}
               </button>
+
+              <FullscreenButton compact iconSize={12} />
 
               <button
                 onClick={() => setShowChat(!showChat)}
