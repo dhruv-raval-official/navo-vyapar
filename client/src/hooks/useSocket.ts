@@ -2,7 +2,8 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { io, Socket } from 'socket.io-client';
 
-const SOCKET_URL = import.meta.env.PROD
+const isProd = Boolean((import.meta as any)?.env?.PROD);
+const SOCKET_URL = isProd
   ? ''
   : typeof window !== 'undefined'
   ? `${window.location.protocol}//${window.location.hostname}:3001`
