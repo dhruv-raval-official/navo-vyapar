@@ -1,0 +1,27 @@
+{
+  "name": "navo-vyapar",
+  "version": "1.0.0",
+  "description": "Navo Vyapar – Premium Indian Multiplayer Board Game",
+  "main": "server/index.js",
+  "scripts": {
+    "dev:server": "node server/index.js",
+    "dev:client": "cd client && npx vite --host",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm --prefix client run build",
+    "start": "node server/index.js",
+    "postinstall": "cd client && npm install"
+  },
+  "keywords": ["board-game", "multiplayer", "indian", "gujarati", "navo-vyapar"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.4",
+    "cors": "^2.8.5",
+    "uuid": "^9.0.0",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
