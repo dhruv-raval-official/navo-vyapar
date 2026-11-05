@@ -16,12 +16,13 @@ const server = http.createServer(app);
 
 const PORT = process.env.PORT || 3001;
 
-// CORS for development and cross-device testing
+// CORS and transport configuration for development and cloud hosting
 const io = new Server(server, {
   cors: {
     origin: '*',
     methods: ['GET', 'POST'],
   },
+  transports: ['polling', 'websocket'],
   pingTimeout: 60000,
   pingInterval: 25000,
 });
